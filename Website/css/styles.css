@@ -93,8 +93,27 @@ img{
   height: auto;
   display: block;
 }
-/*===== CLASS CSS ===== */
 
+/*===== CLASS CSS ===== */
+.section{
+  padding: 4rem 0 2rem;
+}
+
+.section-title{
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+  margin-bottom: var(--mb-3);
+  text-align: center;
+}
+
+.section-subtitle{
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--first-color-darken);
+  text-align: center;
+  font-weight: var(--font-bold);
+  margin-bottom: .25rem;
+}
 
 /*===== LAYOUT =====*/
 

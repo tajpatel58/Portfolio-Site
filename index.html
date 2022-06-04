@@ -5,16 +5,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="Website/css/styles.css">
 
         <!-- ===== BOX ICONS ===== -->
-        
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel="stylesheet"> 
 
-        <title>Responsive personal portfolio | Harris</title>
+        <title>Tajs Portfolio Website</title>
     </head>
     <body>
         <!--===== HEADER =====-->
-        
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div>
+                    <a href="#" class="nav__logo">Taj</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active"></a>Home</li>
+                        <li class="nav__item"><a href="#about" class="nav__link"></a>About</li>
+                        <li class="nav__item"><a href="#skills" class="nav__link"></a>Skills</li>
+                        <li class="nav__item"><a href="#projects" class="nav__link"></a>Projects</li>
+                        <li class="nav__item"><a href="#contact" class="nav__link"></a>Contact</li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
         <main class="l-main">
             <!--===== HOME =====-->
@@ -45,6 +70,6 @@
         <!--===== FOOTER =====-->
         
         <!--===== MAIN JS =====-->
-        <script src=""></script>
+        <script src="Website/js/main.js"></script>
     </body>
 </html>
