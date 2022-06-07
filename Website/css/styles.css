@@ -79,7 +79,7 @@ h3{
   font-weight: var(--font-semi-bold);
 }
 
-u1{
+ul{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -400,6 +400,10 @@ img{
   width: 40%;
 }
 
+.skills__docker{
+  width: 30%;
+}
+
 /* ===== EDUCATION =====*/
 .education__container{
   row-gap: 2rem;
@@ -560,7 +564,7 @@ img{
   }
 
   .about__container,
-  .skills__containerm
+  .skills__container,
   .works__container{
     grid-template-columns: repeat(2,1fr);
   }
