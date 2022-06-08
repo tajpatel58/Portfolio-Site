@@ -576,9 +576,11 @@ body.dark-theme{
   --first-color: #02f6bd;
   --first-color-dark: #662616; 
   --first-color-darken: #290F09; 
-  --text-color: #54423d; 
+  --text-color: #061bff; 
   --first-color-light: #EAE7E6; 
-  --first-color-lighten: #FFFAFA; 
+  --first-color-lighten: #FFFAFA;
+  --background-color: #4d4d4d;
+  background-color: var(--background-color)
 }
 
 /* ===== MEDIA QUERIES=====*/
