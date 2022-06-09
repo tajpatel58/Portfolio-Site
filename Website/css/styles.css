@@ -12,6 +12,7 @@
   --font-bold: 700;
 
   /*===== Colors =====*/
+  --hue-color: 250;
   --first-color: #CC4B2C;
   --first-color-dark: #662616; 
   --first-color-darken: #290F09; 
@@ -218,8 +219,8 @@ img{
 }
 
 .home__img{
-  padding-top: 1.3rem;
-  padding-left: 1rem;
+  padding-top: 1.2rem;
+  padding-left: 0.6rem;
   width: 160px;
   height: 160px;
   background-color: var(--first-color);
@@ -573,13 +574,13 @@ img{
 }
 
 body.dark-theme{
-  --first-color: #02f6bd;
-  --first-color-dark: #662616; 
-  --first-color-darken: #290F09; 
-  --text-color: #061bff; 
+  --first-color: #8800ff;
+  --first-color-dark: #9400c6; 
+  --first-color-darken: #8400b0; 
+  --text-color: #f4f4f4; 
   --first-color-light: #EAE7E6; 
   --first-color-lighten: #FFFAFA;
-  --background-color: #4d4d4d;
+  --background-color: #181818;
   background-color: var(--background-color)
 }
 
