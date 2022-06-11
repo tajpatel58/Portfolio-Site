@@ -10,6 +10,8 @@
         <!-- ===== BOX ICONS ===== -->
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel="stylesheet"> 
 
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
         <title>Tajs Portfolio Website</title>
     </head>
     <body>
@@ -198,45 +200,43 @@
             <section class="job section">
                 <h2 class="section-title">Work Experience</h2>
 
-                <div class="job__container">
-                    <div class="job__content">
-                        <!--- JOB 1 -->
-                        <div class="job__data">
-                            <div>
-                                <h3 class="job__title">Data Analyst</h3>
-                                <span class="job__subtitle">Darktrace</span>
-                                <div class="job__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    Nov 21 - Present
-                            </div>
+                <ul class="timeline">
 
-                            <div>
-                                <span class="job__rounder"></span>
-                                <span class="job__line"></span>
+                    <!-- Item 1 -->
+                    <li>
+                        <div class="direction-r">
+                            <div class="flag-wrapper">
+                                <span class="flag">Darktrace</span>
+                                <span class="time-wrapper"><span class="time">Nov 2021 - Present</span></span>
                             </div>
+                            <div class="desc">Data Analyst - Forecasting, Data Mining, Dashboards</div>
                         </div>
-
-
-                    <!--- JOB 2-->
-                        <div class="job__data">
-                            <div></div>
-
-                            <div>
-                                <span class="job__rounder"></span>
-                                <span class="job__line"></span>
+                    </li>
+                
+                    <!-- Item 2 -->
+                    <li>
+                        <div class="direction-l">
+                            <div class="flag-wrapper">
+                                <span class="flag">STOR-i</span>
+                                <span class="time-wrapper"><span class="time">June 2020 - Sept 2020</span></span>
                             </div>
-
-
-                            <div>
-                                <h3 class="job__title">Academic Researcher</h3>
-                                <span class="job__subtitle">STOR-i, Internship</span>
-                                <div class="job__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    June 20 - Sept 20
-                            </div>
+                            <div class="desc">Academic Research Internship at the University of Lancaster</div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+    
+                    <!-- Item 3 -->
+                    <li>
+                        <div class="direction-r">
+                            <div class="flag-wrapper">
+                                <span class="flag">Argos</span>
+                                <span class="time-wrapper"><span class="time">Nov 2020 - Dec 2021</span></span>
+                            </div>
+                            <div class="desc">Stockroom Assistant</div>
+                        </div>
+                    </li>
+                
+                </ul>
+                
             </section>
 
             <!--===== EDUCATION =====-->
