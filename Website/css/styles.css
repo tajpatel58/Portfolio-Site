@@ -18,7 +18,8 @@
   --first-color-darken: #290F09; 
   --text-color: #54423d; 
   --first-color-light: #EAE7E6; 
-  --first-color-lighten: #FFFAFA; 
+  --first-color-lighten: #FFFAFA;
+  --first-transparent-color: rgba(204, 75, 44, .7);
 
 /* ======= DARK THEME STUFF ====*/
 
@@ -655,7 +656,7 @@ img{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(204, 75, 44, .7);
+  background: var(--first-transparent-color);
   border-radius: .5rem;
   transition: .3s;
 }
@@ -745,7 +746,8 @@ body.dark-theme{
   --first-color-light: #EAE7E6; 
   --first-color-lighten: #FFFAFA;
   --background-color: #181818;
-  background-color: var(--background-color)
+  background-color: var(--background-color);
+  --first-transparent-color:rgba(151, 44, 204, 0.7);
 }
 
 /* ===== MEDIA QUERIES=====*/
