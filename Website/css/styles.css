@@ -572,6 +572,10 @@ img{
   font-style: italic;
   line-height: 1.5em;
   color: var(--first-color-darken);
+  background-color: var(--first-color-lighten);
+  border-radius: 20px;
+  padding: 1em 1em 1em 1em;
+  text-align: center;
 }
 
 .direction-r .desc {
