@@ -21,6 +21,7 @@
   --first-color-lighten: #FFFAFA;
   --first-transparent-color: rgba(204, 75, 44, .7);
   --boxshadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  --nav-color: var(--text-color);
 
 /* ======= DARK THEME STUFF ====*/
 
@@ -177,6 +178,8 @@ img{
 
 .nav__item{
   margin-bottom: var(--mb-4);
+  box-shadow: 5px 5px;
+  width: 120px;
 }
 
 .nav__link{
@@ -188,7 +191,7 @@ img{
 }
 
 .nav__link:hover{
-  color: var(--text-color);
+  color: var(--nav-color);
 }
 
 .nav__toggle{
@@ -208,7 +211,7 @@ img{
 
 /*Active menu*/
 .active{
-  color: var(--text-color);
+  color: var(--nav-color);
 }
 
 /*===== HOME =====*/
@@ -961,6 +964,7 @@ body.dark-theme{
   background-color: var(--background-color);
   --first-transparent-color:rgba(151, 44, 204, 0.7);
   --boxshadow:  0px 0px 15px rgba(255, 255, 255, 0.5);
+  --nav-color: #54423d;
 }
 
 /* ===== MEDIA QUERIES=====*/
