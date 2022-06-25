@@ -1031,7 +1031,7 @@ body.dark-theme{
   .bd-grid{
     margin-left: auto;
     margin-right: auto;
-  }  
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -1128,4 +1128,11 @@ body.dark-theme{
     
     z-index: 15;
   }
+
 }
+
+  @media screen and (max-width: 766px) {
+    .chatbox {
+      display: none;
+    }
+  }
