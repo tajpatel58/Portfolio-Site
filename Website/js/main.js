@@ -67,6 +67,8 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon)
 })
 
+
+/*=================================== CHATBOX JS ================*/
 class Chatbox{
     constructor() {
         this.args = {

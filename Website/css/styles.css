@@ -915,6 +915,10 @@ img{
   cursor: pointer;
 }
 
+.chatbox__button button:hover{
+  background-color: var(--first-color-dark);
+}
+
 *, html {
   --primaryGradient: linear-gradient(93.12deg, var(--first-color), var(--first-color-dark));
   --secondaryGradient: linear-gradient(268.91deg, var(--first-color), var(--first-color-dark));
