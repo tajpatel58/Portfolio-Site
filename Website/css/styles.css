@@ -20,6 +20,7 @@
   --first-color-light: #EAE7E6; 
   --first-color-lighten: #FFFAFA;
   --first-transparent-color: rgba(204, 75, 44, .7);
+  --boxshadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 
 /* ======= DARK THEME STUFF ====*/
 
@@ -811,9 +812,11 @@ img{
   background: #f9f9f9;
   height: 500px;
   width: 350px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--boxshadow);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 /* HEADER */
@@ -880,9 +883,9 @@ img{
   justify-content: space-between;
   padding: 20px 20px;
   background: var(--primaryGradient);
-  box-shadow: var(--secondaryBoxShadow);
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  box-shadow: var(--primaryBoxShadow);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   margin-top: 20px;
 }
 
@@ -953,6 +956,7 @@ body.dark-theme{
   --background-color: #181818;
   background-color: var(--background-color);
   --first-transparent-color:rgba(151, 44, 204, 0.7);
+  --boxshadow:  0px 0px 15px rgba(255, 255, 255, 0.5);
 }
 
 /* ===== MEDIA QUERIES=====*/
