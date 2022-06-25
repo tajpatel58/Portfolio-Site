@@ -111,18 +111,18 @@ class Chatbox{
             return;
         }
 
-        let msg1 = {mame : "User", message : text1}
+        let msg1 = {name : "User", message : text1}
         this.messages.push(msg1);
-
-        fetch($SCRIPT_ROOT + '/predict', {
+        
+        fetch('http://localhost:8080' + '/predictions/chatbot', {
             method: 'POST',
             body : JSON.stringify({message : text1}),
             mode : 'cors',
             headers : {'Content-Type' : 'application/json'},
-        }) 
-        .then(r => r.json())
+        })
+        .then(r => r.text())
         .then(r => {
-            let msg2 = { name : 'Taj', message : r.answer };
+            let msg2 = { name : 'Taj', message : r };
             this.messages.push(msg2);
             this.updateChatText(chatbox)
             textField.value = ''

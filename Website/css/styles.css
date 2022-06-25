@@ -733,7 +733,7 @@ img{
 
 /* =======  Chatbot CSS ===== */
 .chatbox {
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 30px;
 }
@@ -809,7 +809,7 @@ img{
 
 .chatbox__support {
   background: #f9f9f9;
-  height: 450px;
+  height: 500px;
   width: 350px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 20px;
@@ -853,6 +853,8 @@ img{
   background: #E0E0E0;
   padding: 8px 12px;
   max-width: 70%;
+  color: rgb(84, 84, 84);
+  font-size: 0.75rem;
 }
 
 .messages__item--visitor,
@@ -877,7 +879,7 @@ img{
   align-items: center;
   justify-content: space-between;
   padding: 20px 20px;
-  background: var(--secondaryGradient);
+  background: var(--primaryGradient);
   box-shadow: var(--secondaryBoxShadow);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -900,7 +902,7 @@ img{
 .chatbox__button button:focus,
 .chatbox__button button:visited {
   padding: 10px;
-  background: rgb(156, 25, 25);
+  background: var(--first-color);
   border: none;
   outline: none;
   border-top-left-radius: 50px;
@@ -915,7 +917,7 @@ img{
   --secondaryGradient: linear-gradient(268.91deg, var(--first-color), var(--first-color-dark));
   --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
-  --primary: #581B98;
+  --primary: var(--first-color);
 }
 
 * {
