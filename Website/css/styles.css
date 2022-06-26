@@ -172,7 +172,7 @@ img{
   top: 1rem;
   right: 1rem;
   font-size: 2rem;
-  color: var(--first-color-dark);
+  color: var(--first-color-lighten);
   cursor: pointer;
 }
 
@@ -196,7 +196,7 @@ img{
 }
 
 .nav__toggle{
-  color: var(--first-color-dark);
+  color: var(--first-color);
   font-size: 1.3rem;
   cursor: pointer;
 }
@@ -962,13 +962,14 @@ body.dark-theme{
   --text-color: #f4f4f4; 
   --first-color-light: #EAE7E6; 
   --first-color-lighten: #FFFAFA;
-  --background-color: #181818;
+  --background-color: #302f2f;
   background-color: var(--background-color);
   --first-transparent-color:rgba(151, 44, 204, 0.7);
   --boxshadow:  0px 0px 15px rgba(255, 255, 255, 0.5);
   --nav-color: #54423d;
 }
 
+/* ===== CV BUTTON =====*/
 .cv__button {
   --offset: 10px;
   --border-size: 2px;
@@ -993,6 +994,7 @@ body.dark-theme{
 }
 .cv__button:hover {
   background: rgba(100, 0, 0, 0.03);
+  color: var(--first-color-dark);
 }
 .button__horizontal, .button__vertical {
   position: absolute;
