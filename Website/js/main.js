@@ -74,20 +74,24 @@ class Chatbox{
         this.args = {
             openButton: document.querySelector('.chatbox__button'), 
             chatBox: document.querySelector('.chatbox__support'),
-            sendButton: document.querySelector('.send__button')
+            sendButton: document.querySelector('.send__button'),
+            closeButton: document.querySelector('.chatbox__close')
         }
 
         this.state = false;
         this.messages = [];
+        this.counter = 0
     }
 
 
     display() {
-        const {openButton, chatBox, sendButton} = this.args;
+        const {openButton, chatBox, sendButton, closeButton} = this.args;
 
         openButton.addEventListener('click', () => this.toggleState(chatBox))
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
+
+        closeButton.addEventListener('click', () => this.toggleState(chatBox))
 
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
@@ -99,6 +103,15 @@ class Chatbox{
 
     toggleState(chatbox) {
         this.state = !this.state;
+
+        if(this.counter == 0) {
+            let first_msg = {name : 'Taj', message : "You can ask me questions like: <br> -What technologies do you know? <br> -What did you do at Darktrace? <br> -What are your hobbies? <br><br>and more! :)"}
+            this.messages.push(first_msg)
+            this.updateChatText(chatbox)
+        }
+
+        this.counter += 1
+
         if(this.state) {
             chatbox.classList.add('chatbox--active')
         } else{
