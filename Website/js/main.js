@@ -166,5 +166,10 @@ class Chatbox{
     }
 }
 
+
+particlesJS.load('particles-js', './Website/js/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+
 const chatbox = new Chatbox();
 chatbox.display();
