@@ -1273,3 +1273,14 @@ body.dark-theme{
       display: none;
     }
   }
+
+  @media screen and (max-width: 1000px){
+    #particles-js {
+      width: 27.5%;
+      height: 80%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0
+    }
+  }
