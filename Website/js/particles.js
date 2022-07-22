@@ -1481,12 +1481,12 @@ window.particlesJS = function(tag_id, params){
   /* no string id? so it's object params, and set the id with default id */
   if(typeof(tag_id) != 'string'){
     params = tag_id;
-    tag_id = 'particles-js-2';
+    tag_id = 'particles-js';
   }
 
   /* no id? set the id to default id */
   if(!tag_id){
-    tag_id = 'particles-js-2';
+    tag_id = 'particles-js';
   }
 
   /* pJS elements */
