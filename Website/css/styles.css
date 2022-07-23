@@ -1284,3 +1284,41 @@ body.dark-theme{
       left: 0
     }
   }
+  
+  @media screen and (min-width: 1000px){
+    #particles-js {
+      width: 50%;
+      height: 80%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0
+    }
+    #particles-js-2 {
+      width: 37.5%;
+      height: 80%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0
+    }
+  }
+
+  @media screen and (min-height: 1000px){
+    #particles-js {
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0
+    }
+    #particles-js-2 {
+      width: 37.5%;
+      height: 50%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0
+    }
+  }
