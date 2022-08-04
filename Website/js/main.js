@@ -128,8 +128,10 @@ class Chatbox{
 
         let msg1 = {name : "User", message : text1}
         this.messages.push(msg1);
-        
-        fetch('https://us-central1-aiplatform.googleapis.com/v1/projects/Website-Chatbot/locations/us-central1/endpoints/2781034342552436736:predict', {
+        //'https://us-central1-aiplatform.googleapis.com/v1/projects/Website-Chatbot/locations/us-central1/endpoints/2781034342552436736:predict'
+        //'https://chatbot-oenm5752hq-uc.a.run.app'
+        // http://localhost:9090/predictions/chatbot
+        fetch('http://34.125.110.72:8080/predictions/chatbot', {
             method: 'POST',
             body : JSON.stringify({message : text1}),
             mode : 'cors',
