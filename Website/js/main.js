@@ -131,7 +131,7 @@ class Chatbox{
         //'https://us-central1-aiplatform.googleapis.com/v1/projects/Website-Chatbot/locations/us-central1/endpoints/2781034342552436736:predict'
         //'https://chatbot-oenm5752hq-uc.a.run.app'
         // http://localhost:9090/predictions/chatbot
-        fetch('http://34.125.110.72:8080/predictions/chatbot', {
+        fetch('https://35.244.138.95:443/predictions/chatbot', {
             method: 'POST',
             body : JSON.stringify({message : text1}),
             mode : 'cors',
@@ -146,7 +146,7 @@ class Chatbox{
 
         }).catch((error) => {
             console.error('Error: ', error);
-            let errors_msg = {name : 'Taj', message : 'Due to Google Compute Engine costs, this model is temporarily unavailable. If you would like to <br> test this model, pelase drop me an email: <br> tajpatel58@gmail.com. Thanks'}
+            let errors_msg = {name : 'Taj', message : 'Due to Google Compute Engine costs, this model is temporarily unavailable. If you would like to <br> test this model, pelase drop me an email at: <br> tajpatel58@gmail.com. Thanks'}
             this.messages.push(errors_msg)
             this.updateChatText(chatbox)
             textField.value = ''
