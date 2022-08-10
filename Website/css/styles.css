@@ -258,8 +258,9 @@ img{
 .home__profession{
   font-size: var(--small-font-size);
   color: var(--first-color-dark);
-  margin-bottom: var(--mb-5);
+  margin-bottom: 1.5em;
   background-color: var(--background-color);
+  margin-top: 1em;
 }
 
 .home__social{
@@ -949,6 +950,36 @@ img{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* =======  Typewriter Font ===== */
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: var(--text-color);
+  font-size: var(--h1-font-size);
+  font-family: var(--body-font);
+  font-weight: 550;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--first-color); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .025em; /* Adjust as needed */
+  animation: 
+    typing 2s steps(20, end),
+    blink-caret .8s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--first-color) }
 }
 
 /* =======  Changing Theme ===== */
