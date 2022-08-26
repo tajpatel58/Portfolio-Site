@@ -131,6 +131,8 @@ class Chatbox{
         //'https://us-central1-aiplatform.googleapis.com/v1/projects/Website-Chatbot/locations/us-central1/endpoints/2781034342552436736:predict'
         //'https://chatbot-oenm5752hq-uc.a.run.app'
         // http://localhost:9090/predictions/chatbot
+        // this one works: http://34.71.154.134:8080 VM Instance IP.
+        // http://34.160.33.246:80 load balancer http IP. 
         fetch('https://35.244.138.95:443/predictions/chatbot', {
             method: 'POST',
             body : JSON.stringify({message : text1}),
