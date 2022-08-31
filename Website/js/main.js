@@ -133,7 +133,8 @@ class Chatbox{
         // http://localhost:9090/predictions/chatbot
         // this one works: http://34.71.154.134:8080 VM Instance IP.
         // http://34.160.33.246:80 load balancer http IP. 
-        fetch('https://35.244.138.95:443/predictions/chatbot', {
+        // https://35.244.138.95:443 <= Lod balancer IP HTTPS
+        fetch('https://tajpatel-portfolio.co.uk/predictions/chatbot', {
             method: 'POST',
             body : JSON.stringify({message : text1}),
             mode : 'cors',
