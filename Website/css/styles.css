@@ -1635,7 +1635,7 @@ body.dark-theme{
   }
   .sign-up__content {
     width: 350px;
-    height: 600px;
+    height: 700px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -1645,12 +1645,25 @@ body.dark-theme{
   rgba(0, 0, 0, 0.25) 
   0px 14px 28px;
   position: fixed;
-  bottom: 50px;
+  bottom: 115px;
   right: 30px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  }
+
+  .feedback__footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 40px;
+  background: var(--primaryGradient);
+  box-shadow: var(--primaryBoxShadow);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-top: 20px;
   }
   .sign-up__header {
     margin-bottom: 48px;
