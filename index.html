@@ -410,30 +410,35 @@
         <script src="Website/js/main.js"></script>
 
         <div class="sign-up__content">
-            <header class="sign-up__header">
-              <h1 class="sign-up__title">
-                Review my Chatbot. :)
-              </h1>
-            </header>
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="./Website/img/feedback_icon.png" alt="image" style="width:60px; height:40px;">
+                </div>
+
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Review<i class='bx bx-x bx-sm chatbox__close' id="chatbox__close"></i></h4>
+                    <p class="chatbox__description--header">Thanks for using my chatbot, please leave a review.</p>
+                </div>
+            </div>
             <form class="sign-up__form form">
               <div class="form__row">
                 <div class="input">
                   <div class="input__container">
-                    <input class="input__field" id="first-name" placeholder="" required="" type="text" /><label class="input__label" for="first-name">Name</label>
+                    <input class="input__field" id="first-name" placeholder="name"type="text" /><label class="input__label" for="first-name">Name</label>
                   </div>
                 </div>
               </div>
               <div class="form__row">
                 <div class="input">
                   <div class="input__container">
-                    <input class="input__field" id="email" placeholder="" required="" type="text" /><label class="input__label" for="email">Email</label>
+                    <input class="input__field" id="email" placeholder="email" type="text" /><label class="input__label" for="email">Email</label>
                   </div>
                 </div>
               </div>
               <div class="form__row">
                 <div class="input">
                   <div class="input__container">
-                    <input class="input__field" id="message" placeholder="" required="" type="text" /><label class="input__label" for="message">Enter Message</label>
+                    <input class="input__field" id="message" placeholder="message" required="" type="text" /><label class="input__label" for="message">Enter Message</label>
                   </div>
                 </div>
               </div>
@@ -442,7 +447,8 @@
                   <button class="btn btn--regular" disabled="" id="sign-up-button" tabindex="0">Submit</button>
                 </div>
               </div>
-              <div class="feedback__footer"></div>
+              <div class="chatbox__footer">
+            </div>
             </form>
           </div>
         </div>

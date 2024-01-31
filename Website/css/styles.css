@@ -1362,8 +1362,7 @@ body.dark-theme{
   }
   
   body {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.43;
   }
   
@@ -1409,6 +1408,7 @@ body.dark-theme{
     position: relative;
     height: 40px;
     width: 100%;
+    padding: 30px 30px;
   }
   .input__container.error {
     height: auto;
@@ -1418,9 +1418,9 @@ body.dark-theme{
   }
   .input__label {
     position: absolute;
-    padding: 0 8px;
+    padding: 25px 8px;
     top: 0;
-    color: #3d3c48;
+    color: var(--first-color-dark);
     cursor: text;
     font-size: 16px;
     transition-property: top, font-size;
@@ -1635,24 +1635,36 @@ body.dark-theme{
   }
   .sign-up__content {
     width: 350px;
-    height: 700px;
+    height: 500px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 4vh 24px 10vh;
     background-color: #f9f9f9;
     box-shadow: 
   rgba(0, 0, 0, 0.25) 
   0px 14px 28px;
   position: fixed;
-  bottom: 115px;
-  right: 30px;
+  bottom: 190px;
+  right: 400px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   }
 
+  .feedback__header {
+    background: var(--primaryGradient);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: var(--primaryBoxShadow);
+    width: 350px; 
+    height: 117px;
+  }
   .feedback__footer{
   display: flex;
   flex-direction: row;
@@ -1664,6 +1676,9 @@ body.dark-theme{
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   margin-top: 20px;
+  height: 73px;
+  width: 350px;
+  bottom: 0;
   }
   .sign-up__header {
     margin-bottom: 48px;
@@ -1672,7 +1687,7 @@ body.dark-theme{
   .sign-up__title {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: #434176;
+    color: white;
   }
   .sign-up__descr {
     font-size: 1.0rem;
