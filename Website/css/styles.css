@@ -1525,11 +1525,11 @@ body.dark-theme{
     transition: background 0.28s ease-out, box-shadow 0.28s ease-out;
   }
   .btn--regular, .btn--line {
-    padding: 10px 30px;
+    padding: 15px 30px;
   }
   .btn--disabled {
     opacity: 0.4;
-    pointer-events: none;
+    pointer-events: none; 
   }
   
   .component--primary .btn:disabled {
@@ -1746,4 +1746,13 @@ body.dark-theme{
   }
   .chart .j {
     stroke: none;
+  }
+
+  @media screen and (max-width: 1300px) {
+    .chatbox {
+      display: none;
+    }
+    .sign-up__content {
+      display: none;
+    }
   }
