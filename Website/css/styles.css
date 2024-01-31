@@ -1519,13 +1519,13 @@ body.dark-theme{
   .btn {
     border: none;
     border-radius: 4px;
-    font-size: 18px;
+    font-size: 14px;
     cursor: pointer;
     will-change: background, box-shadow;
     transition: background 0.28s ease-out, box-shadow 0.28s ease-out;
   }
   .btn--regular, .btn--line {
-    padding: 16px 56px;
+    padding: 10px 30px;
   }
   .btn--disabled {
     opacity: 0.4;
@@ -1537,11 +1537,11 @@ body.dark-theme{
     pointer-events: none;
   }
   .component--primary .btn--regular {
-    background-color: #434176;
+    background-color: var(--first-color);
     color: #FFF;
   }
   .component--primary .btn--regular:hover {
-    background-color: #6361a8;
+    background-color: var(--first-color-dark);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   }
   .component--primary .btn--regular:focus, .component--primary .btn--regular:active {
@@ -1594,14 +1594,12 @@ body.dark-theme{
     cursor: pointer;
   
   }
-  #sign-up-button{
+  .sign-up-button{
     background: var(--first-color);;
   }
-  #sign-up-button:hover{
-    color: var(--first-color);;
+  .sign-up-button:hover{
+    background: var(--first-color-dark);;
     transition: .5s;
-    background: #fff;
-  border: 1px solid #434176;
   }
   
   .sign-up {
