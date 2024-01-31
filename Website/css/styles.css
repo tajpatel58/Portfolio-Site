@@ -1592,6 +1592,7 @@ body.dark-theme{
   .form__button {
     text-align: center;
     cursor: pointer;
+    padding: 14px 0px;
   
   }
   .sign-up-button{
@@ -1633,7 +1634,7 @@ body.dark-theme{
   }
   .sign-up__content {
     width: 350px;
-    height: 550px;
+    height: 700px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -1642,8 +1643,8 @@ body.dark-theme{
   rgba(0, 0, 0, 0.25) 
   0px 14px 28px;
   position: fixed;
-  bottom: 120px;
-  left: 320px;
+  bottom: 115px;
+  right: 450px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -1660,7 +1661,6 @@ body.dark-theme{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: var(--primaryBoxShadow);
-    width: 350px; 
     height: 117px;
   }
   .feedback__footer{
