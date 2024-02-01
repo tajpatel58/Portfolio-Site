@@ -181,26 +181,37 @@ particlesJS.load('particles-js', './Website/js/particles.json', function() {
 const chatbox = new Chatbox();
 chatbox.display();
 
-document.addEventListener('DOMContentLoaded', function(){
-    let requiredInput = document.querySelectorAll('input[required]');
-    let signUpButton = document.querySelector('#sign-up-button');
-    var checkValidForm = () => {
-      if (
-        _.every(requiredInput, (input) => {
-          return !_.isEmpty(input.value)
-        })
-      ){
-        if (signUpButton.hasAttribute('disabled')) return
-        signUpButton.removeAttribute('disabled')
-      } else {
-        if (!signUpButton.hasAttribute('disabled')) return
-        signUpButton.addAttribute('disabled')
-      }
+/*=================================== FEEDBACK FORM JS ================*/
+class FeedbackForm{
+    constructor() {
+        this.args = {
+            form: document.querySelector('.sign-up__content'),
+            closeButton: document.getElementById('feedback__close')
+        }
+        this.state = false;
+        this.counter = 0
     }
-    _.forEach(requiredInput, (input) => {
-      input.addEventListener('change', function(e){
-        console.log(e.target.value)
-        checkValidForm()
-      })
-    })
-  });
+
+
+    display() {
+        const {form, closeButton} = this.args;
+        console.log(this.state)
+        closeButton.addEventListener('click', () => this.toggleState(form))
+    }
+
+    toggleState(form) {
+        this.state = !this.state;
+        console.log(this.state)
+
+        this.counter += 1
+
+        if(this.state) {
+            form.classList.add('form--active')
+        } else{
+            form.classList.remove('form--active')
+        }
+    }
+}
+
+const feedbackForm = new FeedbackForm();
+feedbackForm.display();

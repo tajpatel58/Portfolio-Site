@@ -1649,6 +1649,8 @@ body.dark-theme{
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  opacity: 1;
+  z-index: 123456;
   }
 
   .feedback__header {
@@ -1744,6 +1746,19 @@ body.dark-theme{
   }
   .chart .j {
     stroke: none;
+  }
+
+  .form--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 0;
+  
+  }
+
+  .feedback__close {
+    color: var(--first-color-lighten);
+    float: right;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 1300px) {
