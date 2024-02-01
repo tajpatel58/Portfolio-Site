@@ -1422,10 +1422,11 @@ body.dark-theme{
     top: 0;
     color: var(--first-color-dark);
     cursor: text;
-    font-size: 16px;
+    font-size: 15px;
     transition-property: top, font-size;
     transition-timing-function: linear;
     transition-duration: 0.18s;
+    z-index: -1
   }
   .input__field {
     background: transparent;
@@ -1440,7 +1441,7 @@ body.dark-theme{
     color: red;
   }
   .input__field:focus, .input__field:not(:placeholder-shown) {
-    border-color: #434176;
+    border-color: var(--first-color-dark);
   }
   .input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
     font-size: 14px;
