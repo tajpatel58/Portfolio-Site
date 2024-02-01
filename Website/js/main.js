@@ -206,9 +206,9 @@ class FeedbackForm{
         this.counter += 1
 
         if(this.state) {
-            form.classList.add('form--active')
+            form.classList.add('form--inactive')
         } else{
-            form.classList.remove('form--active')
+            form.classList.remove('form--inactive')
         }
     }
 }
