@@ -1433,7 +1433,7 @@ body.dark-theme{
     border-bottom-width: 2px;
     padding: 6px 8px;
     font-size: 16px;
-    transition: border 0.28s ease-out;
+    transition: border 0.2s ease-out;
   }
   .input__field:required + .input__label:after {
     content: "*";
@@ -1447,7 +1447,7 @@ body.dark-theme{
     top: -16px;
   }
   .input:hover .input__field:placeholder-shown:not(:focus) {
-    border-color: #918fc1;
+    border-color: var(--first-color);
   }
   
   .input-checkbox__field {
