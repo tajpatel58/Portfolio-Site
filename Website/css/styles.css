@@ -1633,17 +1633,17 @@ body.dark-theme{
     align-items: center;
     background-color: #f9f9f9;
     box-shadow: 
-  rgba(0, 0, 0, 0.25) 
-  0px 14px 28px;
-  position: fixed;
-  bottom: 140px;
-  right: 650px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  opacity: 1;
-  z-index: 123456;
+    rgba(0, 0, 0, 0.25) 
+    0px 14px 28px;
+    position: fixed;
+    bottom: 100px;
+    right: 650px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: none;
+    z-index: 123456;
   }
 
   .feedback__header {
@@ -1741,10 +1741,10 @@ body.dark-theme{
     stroke: none;
   }
 
-  .form--inactive {
+  .form--active {
     transform: translateY(-40px);
     z-index: 123456;
-    display: none;
+    display: flex;
 
   }
 
