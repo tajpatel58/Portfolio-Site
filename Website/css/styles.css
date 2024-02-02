@@ -749,7 +749,7 @@ img{
 .chatbox {
   position: fixed;
   bottom: 100px;
-  right: 30px;
+  right: 100px;
 }
 
 /* CONTENT IS CLOSE */
@@ -927,6 +927,8 @@ img{
   border-bottom-left-radius: 50px;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  height: 40px; 
+  width: 40px;
 }
 
 .chatbox__button button:hover{
@@ -1764,6 +1766,8 @@ body.dark-theme{
     border-bottom-left-radius: 50px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    height: 40px; 
+    width: 40px;
 }
 
 .feedback__button button:hover{
@@ -1772,13 +1776,13 @@ body.dark-theme{
 
 .feedback_open_close_button {
   position: fixed;
-  bottom: 80px; 
+  bottom: 460px; 
   right: 30px;
 }
 
 .chatbox_open_close_button {
   position: fixed;
-  bottom: 30px;
+  bottom: 408px;
   right: 30px;
 }
 
