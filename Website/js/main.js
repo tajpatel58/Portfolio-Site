@@ -186,7 +186,8 @@ class FeedbackForm{
     constructor() {
         this.args = {
             form: document.querySelector('.sign-up__content'),
-            closeButton: document.getElementById('feedback__close')
+            closeButton: document.getElementById('feedback__close'),
+            openButton: document.querySelector('.feedback_open_close_button')
         }
         this.state = false;
         this.counter = 0
@@ -194,9 +195,10 @@ class FeedbackForm{
 
 
     display() {
-        const {form, closeButton} = this.args;
+        const {form, closeButton, openButton} = this.args;
         console.log(this.state)
         closeButton.addEventListener('click', () => this.toggleState(form))
+        openButton.addEventListener('click', () => this.toggleState(form))
     }
 
     toggleState(form) {
