@@ -1634,9 +1634,6 @@ body.dark-theme{
     flex-flow: column nowrap;
     align-items: center;
     background-color: #f9f9f9;
-    box-shadow: 
-    rgba(0, 0, 0, 0.25) 
-    0px 14px 28px;
     position: fixed;
     bottom: 100px;
     right: 650px;
@@ -1646,6 +1643,7 @@ body.dark-theme{
     border-bottom-left-radius: 20px;
     display: none;
     z-index: 123456;
+    box-shadow: var(--boxshadow);
   }
 
   .feedback__header {
