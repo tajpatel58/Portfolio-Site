@@ -205,14 +205,15 @@ class Interactables{
         this.form =  document.querySelector('.sign-up__content');
         this.chatbox = document.querySelector('.chatbox__support');
         this.feedbackCloseButton = document.getElementById('feedback__close');
-        this.feedbackOpenButton =  document.querySelector('.feedback_open_close_button');
         this.chatBoxCloseButton = document.querySelector('.chatbox__close');
+        this.feedbackOpenButton =  document.querySelector('.feedback_open_close_button');
         this.chatBoxOpenButton = document.querySelector('.chatbox__button'); 
     }
 
     addClickers() {
         this.chatBoxOpenButton.addEventListener('click', () => this.chatBoxToggleState())
         this.feedbackOpenButton.addEventListener('click', () => this.feedbackToggleState())
+        this.feedbackCloseButton.addEventListener('click', () => this.feedbackClose())
     }
 
     chatBoxToggleState() {
@@ -244,6 +245,11 @@ class Interactables{
             this.form.classList.remove('form--active');
             this.feedbackState = false;
         }
+    }
+
+    feedbackClose() {
+        this.feedbackState = false;
+        this.form.classList.remove('form--active')
     }
 }
 
