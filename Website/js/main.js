@@ -185,33 +185,38 @@ chatbox.display();
 class FeedbackForm{
     constructor() {
         this.args = {
-            form: document.querySelector('.sign-up__content'),
             closeButton: document.getElementById('feedback__close'),
             openButton: document.querySelector('.feedback_open_close_button')
         }
         this.state = false;
-        this.counter = 0
+        this.counter = 0;
+        this.formSent = false;
+        this.submitButton = document.getElementById('sign-up-button');
+        this.form =  document.querySelector('.sign-up__content');
     }
 
 
     display() {
-        const {form, closeButton, openButton} = this.args;
-        console.log(this.state)
-        closeButton.addEventListener('click', () => this.toggleState(form))
-        openButton.addEventListener('click', () => this.toggleState(form))
+        const {closeButton, openButton} = this.args;
+        closeButton.addEventListener('click', () => this.toggleState())
+        openButton.addEventListener('click', () => this.toggleState())
+        this.submitButton.addEventListener('click', () => this.submitReview())
     }
 
-    toggleState(form) {
+    toggleState() {
         this.state = !this.state;
-        console.log(this.state)
-
         this.counter += 1
 
         if(this.state) {
-            form.classList.add('form--active')
+            this.form.classList.add('form--active')
         } else{
-            form.classList.remove('form--active')
+            this.form.classList.remove('form--active')
         }
+    }
+
+    submitReview() {
+        this.state = !this.state;
+        this.form.classList.remove('form--active')
     }
 }
 
