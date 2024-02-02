@@ -770,7 +770,6 @@ img{
   z-index: 123456;
   opacity: 1;
   display: flex;
-
 }
 
 /* BUTTON */
@@ -1300,15 +1299,6 @@ body.dark-theme{
 
 }
 
-  @media screen and (max-width: 1300px) {
-    .chatbox {
-      display: none;
-    }
-    .sign-up__content {
-      display: none;
-    }
-  }
-
   @media screen and (max-width: 1000px){
     #particles-js {
       width: 27.5%;
@@ -1646,7 +1636,7 @@ body.dark-theme{
   0px 14px 28px;
   position: fixed;
   bottom: 115px;
-  right: 450px;
+  right: 650px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -1754,8 +1744,42 @@ body.dark-theme{
     transform: translateY(-40px);
     z-index: 123456;
     display: none;
-  
+
   }
+
+  .feedback__button {
+    text-align: left;
+  }
+
+  .feedback__button button,
+  .feedback__button button:focus,
+  .feedback__button button:visited {
+    padding: 10px;
+    background: var(--first-color);
+    border: none;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.feedback__button button:hover{
+  background-color: var(--first-color-dark);
+}
+
+.feedback_open_close_button {
+  position: fixed;
+  bottom: 80px; 
+  right: 30px;
+}
+
+.chatbox_open_close_button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
 
   .feedback__close {
     color: var(--first-color-lighten);
