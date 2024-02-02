@@ -1585,7 +1585,7 @@ body.dark-theme{
   .form__button {
     text-align: center;
     cursor: pointer;
-    padding: 14px 0px;
+    padding: 0px 0px;
   
   }
   .sign-up-button{
