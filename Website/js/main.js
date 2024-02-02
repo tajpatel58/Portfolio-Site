@@ -91,8 +91,6 @@ class Chatbox{
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
 
-        closeButton.addEventListener('click', () => this.toggleState(chatBox))
-
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
             if (key === "Enter") {
@@ -111,12 +109,6 @@ class Chatbox{
         }
 
         this.counter += 1
-
-        if(this.state) {
-            chatbox.classList.add('chatbox--active')
-        } else{
-            chatbox.classList.remove('chatbox--active')
-        }
     }
 
     onSendButton(chatbox) {
@@ -184,34 +176,17 @@ chatbox.display();
 /*=================================== FEEDBACK FORM JS ================*/
 class FeedbackForm{
     constructor() {
-        this.args = {
-            closeButton: document.getElementById('feedback__close'),
-            openButton: document.querySelector('.feedback_open_close_button')
-        }
         this.state = false;
         this.counter = 0;
         this.formSent = false;
         this.submitButton = document.getElementById('sign-up-button');
         this.form =  document.querySelector('.sign-up__content');
+        this.chatbox = document.querySelector('.chatbox__support');
     }
 
 
     display() {
-        const {closeButton, openButton} = this.args;
-        closeButton.addEventListener('click', () => this.toggleState())
-        openButton.addEventListener('click', () => this.toggleState())
         this.submitButton.addEventListener('click', () => this.submitReview())
-    }
-
-    toggleState() {
-        this.state = !this.state;
-        this.counter += 1
-
-        if(this.state) {
-            this.form.classList.add('form--active')
-        } else{
-            this.form.classList.remove('form--active')
-        }
     }
 
     submitReview() {
@@ -222,3 +197,55 @@ class FeedbackForm{
 
 const feedbackForm = new FeedbackForm();
 feedbackForm.display();
+
+class Interactables{
+    constructor() {
+        this.chatBoxState = false;
+        this.feedbackState = false;
+        this.form =  document.querySelector('.sign-up__content');
+        this.chatbox = document.querySelector('.chatbox__support');
+        this.feedbackCloseButton = document.getElementById('feedback__close');
+        this.feedbackOpenButton =  document.querySelector('.feedback_open_close_button');
+        this.chatBoxCloseButton = document.querySelector('.chatbox__close');
+        this.chatBoxOpenButton = document.querySelector('.chatbox__button'); 
+    }
+
+    addClickers() {
+        this.chatBoxOpenButton.addEventListener('click', () => this.chatBoxToggleState())
+        this.feedbackOpenButton.addEventListener('click', () => this.feedbackToggleState())
+    }
+
+    chatBoxToggleState() {
+        console.log(this.feedbackState)
+        if(!this.chatBoxState && !this.feedbackState) {
+            this.chatbox.classList.add('chatbox--active')
+            this.chatBoxState = true;
+        } else if(!this.chatBoxState && this.feedbackState) {
+            this.form.classList.remove('form--active')
+            this.chatbox.classList.add('chatbox--active')
+            this.chatBoxState = true;
+            this.feedbackState = false;
+        } else if(this.chatBoxState && !this.feedbackState) {
+            this.chatbox.classList.remove('chatbox--active')
+            this.chatBoxState = false;
+        }
+    }
+
+    feedbackToggleState() {
+        if(!this.chatBoxState && !this.feedbackState) {
+            this.form.classList.add('form--active');
+            this.feedbackState = true;
+        } else if(this.chatBoxState && !this.feedbackState) {
+            this.form.classList.add('form--active');
+            this.chatbox.classList.remove('chatbox--active');
+            this.chatBoxState = false;
+            this.feedbackState = true;
+        } else if(!this.chatBoxState && this.feedbackState) {
+            this.form.classList.remove('form--active');
+            this.feedbackState = false;
+        }
+    }
+}
+
+const interactables = new Interactables();
+interactables.addClickers();
