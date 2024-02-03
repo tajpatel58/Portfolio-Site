@@ -174,46 +174,26 @@ const chatbox = new Chatbox();
 chatbox.display();
 
 /*=================================== FEEDBACK FORM JS ================*/
-class FeedbackForm{
-    constructor() {
-        this.state = false;
-        this.counter = 0;
-        this.formSent = false;
-        this.submitButton = document.getElementById('sign-up-button');
-        this.form =  document.querySelector('.sign-up__content');
-        this.chatbox = document.querySelector('.chatbox__support');
-    }
-
-
-    display() {
-        this.submitButton.addEventListener('click', () => this.submitReview())
-    }
-
-    submitReview() {
-        this.state = !this.state;
-        this.form.classList.remove('form--active')
-    }
-}
-
-const feedbackForm = new FeedbackForm();
-feedbackForm.display();
-
-class Interactables{
+class FormChatboxInteractables{
     constructor() {
         this.chatBoxState = false;
+        this.feedbackSent = false;
         this.feedbackState = false;
-        this.form =  document.querySelector('.sign-up__content');
+        this.feedbackForm =  document.querySelector('.sign-up__content');
         this.chatbox = document.querySelector('.chatbox__support');
         this.feedbackCloseButton = document.getElementById('feedback__close');
         this.chatBoxCloseButton = document.querySelector('.chatbox__close');
         this.feedbackOpenButton =  document.querySelector('.feedback_open_close_button');
         this.chatBoxOpenButton = document.querySelector('.chatbox__button'); 
+        this.submitButton = document.getElementById('sign-up-button');
     }
 
     addClickers() {
         this.chatBoxOpenButton.addEventListener('click', () => this.chatBoxToggleState())
         this.feedbackOpenButton.addEventListener('click', () => this.feedbackToggleState())
         this.feedbackCloseButton.addEventListener('click', () => this.feedbackClose())
+        this.chatBoxCloseButton.addEventListener('click', () => this.chatBoxClose())
+        this.submitButton.addEventListener('click', () => this.submitReview())
     }
 
     chatBoxToggleState() {
@@ -222,7 +202,7 @@ class Interactables{
             this.chatbox.classList.add('chatbox--active')
             this.chatBoxState = true;
         } else if(!this.chatBoxState && this.feedbackState) {
-            this.form.classList.remove('form--active')
+            this.feedbackForm.classList.remove('form--active')
             this.chatbox.classList.add('chatbox--active')
             this.chatBoxState = true;
             this.feedbackState = false;
@@ -234,24 +214,42 @@ class Interactables{
 
     feedbackToggleState() {
         if(!this.chatBoxState && !this.feedbackState) {
-            this.form.classList.add('form--active');
+            this.feedbackForm.classList.add('form--active');
             this.feedbackState = true;
         } else if(this.chatBoxState && !this.feedbackState) {
-            this.form.classList.add('form--active');
+            this.feedbackForm.classList.add('form--active');
             this.chatbox.classList.remove('chatbox--active');
             this.chatBoxState = false;
             this.feedbackState = true;
         } else if(!this.chatBoxState && this.feedbackState) {
-            this.form.classList.remove('form--active');
+            this.feedbackForm.classList.remove('form--active');
             this.feedbackState = false;
         }
     }
 
     feedbackClose() {
         this.feedbackState = false;
-        this.form.classList.remove('form--active')
+        this.feedbackForm.classList.remove('form--active')
+    }
+
+    chatBoxClose() {
+        this.chatBoxState = false;
+        if (!this.feedbackSent) {
+            this.feedbackState = true;
+            this.chatbox.classList.remove('chatbox--active')
+            this.feedbackForm.classList.add('form--active')
+        } else {
+            this.chatBoxState = false;
+            this.chatbox.classList.remove('chatbox--active')
+        }
+    }
+
+    submitReview() {
+        this.feedbackState = false;
+        this.feedbackSent = true;
+        this.feedbackForm.classList.remove('form--active')
     }
 }
 
-const interactables = new Interactables();
+const interactables = new FormChatboxInteractables();
 interactables.addClickers();
