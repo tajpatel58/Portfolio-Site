@@ -197,6 +197,7 @@ class FormChatboxInteractables{
 
         // buttons:
         this.submitButton = document.getElementById('sign-up-button');
+        this.messageBox = document.getElementById('message')
 
     }
 
@@ -205,6 +206,7 @@ class FormChatboxInteractables{
         this.feedbackOpenButton.addEventListener('click', () => this.feedbackToggleState())
         this.feedbackCloseButton.addEventListener('click', () => this.feedbackClose())
         this.chatBoxCloseButton.addEventListener('click', () => this.chatBoxClose())
+        this.messageBox.addEventListener("input", () => this.validateReview())
         this.submitButton.addEventListener('click', () => this.submitReview())
         this.successBoxCloseButton.addEventListener('click', () => this.successBoxClose())
     }
@@ -269,6 +271,14 @@ class FormChatboxInteractables{
 
     successBoxClose() {
         this.successBox.classList.remove('successbox--active')
+    }
+
+    validateReview() {
+        if (this.messageBox.value.length == 0) {
+            this.submitButton.disabled = true;
+        } else {
+            this.submitButton.disabled = false;
+        }
     }
 }
 
