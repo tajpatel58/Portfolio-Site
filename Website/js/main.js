@@ -186,6 +186,7 @@ class FormChatboxInteractables{
         this.feedbackOpenButton =  document.querySelector('.feedback_open_close_button');
         this.chatBoxOpenButton = document.querySelector('.chatbox__button'); 
         this.submitButton = document.getElementById('sign-up-button');
+        this.successBox = document.querySelector('.successbox__support')
     }
 
     addClickers() {
@@ -247,7 +248,9 @@ class FormChatboxInteractables{
     submitReview() {
         this.feedbackState = false;
         this.feedbackSent = true;
+        console.log(this.feedbackSent)
         this.feedbackForm.classList.remove('form--active')
+        this.successBox.classList.add('successbox--active')
     }
 }
 
