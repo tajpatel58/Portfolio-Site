@@ -1351,6 +1351,8 @@ body.dark-theme{
     }
   }
 
+/* =======  FEEDBACK FORM CSS ===== */
+
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -1793,8 +1795,8 @@ body.dark-theme{
   /* =======  THANKS/SUCCESS BOX CSS ===== */
 .successbox {
   position: fixed;
-  bottom: 100px;
-  right: 450px;
+  bottom: 400px;
+  right: 100px;
 }
 
 /* SUCCESS BOX IS CLOSE */
@@ -1811,7 +1813,7 @@ body.dark-theme{
 /* CONTENT ISOPEN */
 .successbox--active {
   transform: translateY(-40px);
-  z-index: 123456;
+  z-index: 123456999;
   opacity: 1;
   display: flex;
 }

@@ -176,17 +176,28 @@ chatbox.display();
 /*=================================== FEEDBACK FORM JS ================*/
 class FormChatboxInteractables{
     constructor() {
+        // bool variables:
         this.chatBoxState = false;
         this.feedbackSent = false;
         this.feedbackState = false;
+
+        // boxes:
         this.feedbackForm =  document.querySelector('.sign-up__content');
         this.chatbox = document.querySelector('.chatbox__support');
+        this.successBox = document.querySelector('.successbox__support')
+
+        // close buttons:
         this.feedbackCloseButton = document.getElementById('feedback__close');
         this.chatBoxCloseButton = document.querySelector('.chatbox__close');
+        this.successBoxCloseButton = document.querySelector('.successbox__close')
+
+        // open buttons:
         this.feedbackOpenButton =  document.querySelector('.feedback_open_close_button');
         this.chatBoxOpenButton = document.querySelector('.chatbox__button'); 
+
+        // buttons:
         this.submitButton = document.getElementById('sign-up-button');
-        this.successBox = document.querySelector('.successbox__support')
+
     }
 
     addClickers() {
@@ -195,10 +206,10 @@ class FormChatboxInteractables{
         this.feedbackCloseButton.addEventListener('click', () => this.feedbackClose())
         this.chatBoxCloseButton.addEventListener('click', () => this.chatBoxClose())
         this.submitButton.addEventListener('click', () => this.submitReview())
+        this.successBoxCloseButton.addEventListener('click', () => this.successBoxClose())
     }
 
     chatBoxToggleState() {
-        console.log(this.feedbackState)
         if(!this.chatBoxState && !this.feedbackState) {
             this.chatbox.classList.add('chatbox--active')
             this.chatBoxState = true;
@@ -214,17 +225,21 @@ class FormChatboxInteractables{
     }
 
     feedbackToggleState() {
-        if(!this.chatBoxState && !this.feedbackState) {
-            this.feedbackForm.classList.add('form--active');
-            this.feedbackState = true;
-        } else if(this.chatBoxState && !this.feedbackState) {
-            this.feedbackForm.classList.add('form--active');
-            this.chatbox.classList.remove('chatbox--active');
-            this.chatBoxState = false;
-            this.feedbackState = true;
-        } else if(!this.chatBoxState && this.feedbackState) {
-            this.feedbackForm.classList.remove('form--active');
-            this.feedbackState = false;
+        if (this.feedbackSent) {
+            this.successBox.classList.add('successbox--active')
+        } else  {
+            if(!this.chatBoxState && !this.feedbackState) {
+                this.feedbackForm.classList.add('form--active');
+                this.feedbackState = true;
+            } else if(this.chatBoxState && !this.feedbackState) {
+                this.feedbackForm.classList.add('form--active');
+                this.chatbox.classList.remove('chatbox--active');
+                this.chatBoxState = false;
+                this.feedbackState = true;
+            } else if(!this.chatBoxState && this.feedbackState) {
+                this.feedbackForm.classList.remove('form--active');
+                this.feedbackState = false;
+            }
         }
     }
 
@@ -248,9 +263,12 @@ class FormChatboxInteractables{
     submitReview() {
         this.feedbackState = false;
         this.feedbackSent = true;
-        console.log(this.feedbackSent)
         this.feedbackForm.classList.remove('form--active')
         this.successBox.classList.add('successbox--active')
+    }
+
+    successBoxClose() {
+        this.successBox.classList.remove('successbox--active')
     }
 }
 
