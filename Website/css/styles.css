@@ -1790,6 +1790,117 @@ body.dark-theme{
     cursor: pointer;
   }
 
+  /* =======  THANKS/SUCCESS BOX CSS ===== */
+.successbox {
+  position: fixed;
+  bottom: 100px;
+  right: 450px;
+}
+
+/* SUCCESS BOX IS CLOSE */
+.successbox__support {
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+  width: 300px;
+  height: 350px;
+  z-index: -123456;
+  display: flex;
+  transition: all 0.6s ease-in-out;
+}
+
+/* CONTENT ISOPEN */
+.successbox--active {
+  transform: translateY(-40px);
+  z-index: 123456;
+  opacity: 1;
+  display: flex;
+}
+
+
+/* HEADER */
+.successbox__header {
+  position: sticky;
+  top: 0;
+  background: orange;
+}
+
+
+/* FOOTER */
+.successbox__footer {
+  position: sticky;
+  bottom: 0;
+}
+
+.successbox__support {
+  background: #f9f9f9;
+  height: 300px;
+  width: 350px;
+  box-shadow: var(--boxshadow);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  z-index: 9999999;
+}
+
+/* HEADER */
+.successbox__header {
+  background: var(--primaryGradient);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: var(--primaryBoxShadow);
+  height: 100px;
+}
+
+.successbox__image--header {
+  margin-right: 10px;
+}
+
+.successbox__heading--header {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.successbox__description--header {
+  font-size: .9rem;
+  color: white;
+}
+
+/* FOOTER */
+.successbox__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  background: var(--primaryGradient);
+  box-shadow: var(--primaryBoxShadow);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-top: 20px;
+  height: 100px;
+}
+
+.successbox__footer input {
+  width: 80%;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 30px;
+  text-align: left;
+}
+
+.successbox__close {
+  color: var(--first-color-lighten);
+  float: right;
+  cursor: pointer;
+}
+
   @media screen and (max-width: 1300px) {
     .chatbox {
       display: none;
