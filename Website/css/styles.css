@@ -1834,7 +1834,7 @@ body.dark-theme{
 
 .successbox__support {
   background: #f9f9f9;
-  height: 300px;
+  height: 120px;
   width: 350px;
   box-shadow: var(--boxshadow);
   border-top-left-radius: 20px;
@@ -1854,8 +1854,10 @@ body.dark-theme{
   padding: 15px 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   box-shadow: var(--primaryBoxShadow);
-  height: 100px;
+  height: 120px;
 }
 
 .successbox__image--header {
@@ -1870,29 +1872,6 @@ body.dark-theme{
 .successbox__description--header {
   font-size: .9rem;
   color: white;
-}
-
-/* FOOTER */
-.successbox__footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 20px;
-  background: var(--primaryGradient);
-  box-shadow: var(--primaryBoxShadow);
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  margin-top: 20px;
-  height: 100px;
-}
-
-.successbox__footer input {
-  width: 80%;
-  border: none;
-  padding: 10px 10px;
-  border-radius: 30px;
-  text-align: left;
 }
 
 .successbox__close {
