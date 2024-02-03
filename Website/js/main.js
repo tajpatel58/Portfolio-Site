@@ -277,7 +277,7 @@ class FormChatboxInteractables{
         if (this.messageBox.value.length == 0) {
             this.submitButton.disabled = true;
         } else {
-            this.submitButton.disabled = false;
+            this.submitButton.disabled = false; 
         }
     }
 }
