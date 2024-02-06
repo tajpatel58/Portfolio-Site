@@ -485,6 +485,7 @@ img{
   position: relative;
   display: inline-block;
   text-align: center;
+  padding: 5px 5px 15px 5px;
 }
 
 .flag {
@@ -588,8 +589,9 @@ img{
   color: var(--first-color-darken);
   background-color: var(--first-color-lighten);
   border-radius: 20px;
-  padding: 1em 1em 1em 1em;
-  text-align: center;
+  padding: 2em 2em 2em 2em;
+  vertical-align: text-top;
+  border:2px solid var(--first-color);;
 }
 
 .direction-r .desc {
@@ -1282,7 +1284,7 @@ body.dark-theme{
   .desc {
     position: relative;
     margin: 1em 0 0 0;
-    padding: 1em;
+    padding: 2em 2em;
     background: rgb(254, 254, 254);
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
     -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
