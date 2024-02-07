@@ -66,14 +66,13 @@
                         <span class="home__profession">Data Enthusiast</span>
 
                         <div class="home__social">
+                            <!--======= SOCIALS=======-->
                             <a href="https://www.linkedin.com/in/taj-patel-384a6b217/" target="_blank" class="home__social-link"><i class='bx bxl-linkedin bx-sm'></i></a>
                             <a href="https://github.com/tajpatel58" target="_blank" class="home__social-link"><i class='bx bxl-github bx-sm' ></i></a>
+                            <a href="https://www.youtube.com/@TheAvgDS" target="_blank" class="home__social-link"><i class='bx bxl-youtube bx-sm'></i></a>
 
                             <!--======= THEME CHANGES START=======-->
                             <i class='bx bx-moon change-theme bx-sm' id="theme-button"></i>
-
-
-                            <!--======= THEME CHANGES END=======-->
                             
                         </div>
                         
@@ -140,7 +139,9 @@
                                     <span class="about__information-subtitle">Multiple Side Projects</span>
                                     <span class="about__information-subtitle">Completed</span>
                                 </div>
+                            </div>
                         </div>
+                    </div>
                 </div>
             </section>
 
@@ -217,18 +218,30 @@
 
                 <ul class="timeline">
 
-                    <!-- Item 1 -->
+                    <!-- Kantar -->
+                    <li>
+                        <div class="direction-r">
+                            <div class="flag-wrapper">
+                                <span class="flag">Kantar</span>
+                                <span class="time-wrapper"><span class="time">Aug 2022 - Present</span></span>
+                            </div>
+                            <div class="desc">Product Development - Data Scientist - Optimisation, Pipelining(ADF), Analysis
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Darktrace -->
                     <li>
                         <div class="direction-l">
                             <div class="flag-wrapper">
                                 <span class="flag">Darktrace</span>
-                                <span class="time-wrapper"><span class="time">Nov 2021 - Present</span></span>
+                                <span class="time-wrapper"><span class="time">Nov 2021 - Aug 2022</span></span>
                             </div>
                             <div class="desc">Data Analyst - Forecasting, Modelling, Data Mining and creating Dashboards</div>
                         </div>
                     </li>
     
-                    <!-- Item 2 -->
+                    <!-- RETAIL -->
                     <li>
                         <div class="direction-r">
                             <div class="flag-wrapper">
@@ -239,7 +252,7 @@
                         </div>
                     </li>
 
-                    <!-- Item 3 -->
+                    <!-- STORI -->
                     <li>
                         <div class="direction-l">
                             <div class="flag-wrapper">
@@ -322,8 +335,8 @@
                         <img src="Website/img/Chatbot.jpg" alt="">
 
                         <div class="works__data">
-                            <a href="https://github.com/tajpatel58/Girlfriend-Chatbot" target="_blank" class="works__link"><i class='bx bx-link-alt' ></i></a>
-                            <span class="works__title">Girlfriend Chatbot</span>
+                            <a href="https://github.com/tajpatel58/Website-Chatbot" target="_blank" class="works__link"><i class='bx bx-link-alt' ></i></a>
+                            <span class="works__title">Website Chatbot</span>
                         </div>
                     </div>
 
@@ -396,17 +409,91 @@
                         <button class="chatbox__send--footer send__button">Send</button>
                     </div>
                 </div>
-                <div class="chatbox__button">
-                    <button class="chatbox_open_close_button"><img src="./Website/img/messages.svg"></img></button>
-                </div>
             </div>
         </div>
         
             <script>
             </script>
-            <script type="text/javascript" src="Website/js/main.js"></script>
         
-        <!--===== MAIN JS =====-->
-        <script src="Website/js/main.js"></script>
+        <!--===== FEEDBACK FORM JS =====-->
+
+        <form class="sign-up__form form">
+        <div class="sign-up__content">
+            <div class="feedback__header">
+                <div class="chatbox__image--header">
+                    <img src="./Website/img/feedback_icon.png" alt="image" style="width:90px; height:40px;">
+                </div>
+
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Review<i class='bx bx-x bx-sm feedback__close' id='feedback__close'></i></h4>
+                    <p class="chatbox__description--header">Thanks for using my chatbot, please leave a review to improve user experience.</p>
+                </div>
+            </div>
+              <div class="form__row">
+                <div class="input">
+                  <div class="input__container">
+                    <input class="input__field" id="first-name" placeholder="name"type="text" /><label class="input__label" for="first-name">Name</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="input">
+                  <div class="input__container">
+                    <input class="input__field" id="email" placeholder="email" type="text" /><label class="input__label" for="email">Email</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="input">
+                  <div class="input__container">
+                    <input class="input__field" id="company" placeholder="company" type="text" /><label class="input__label" for="company_name">Company</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="input">
+                  <div class="input__container">
+                    <input class="input__field" id="message" placeholder="message" required="" type="text" /><label class="input__label" for="message">Enter Message</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="component component--primary form__button">
+                  <button class="btn btn--regular" id="sign-up-button" type="button" disabled="disabled" tabindex="0">Submit</button>
+                </div>
+              </div>
+              <div class="feedback__footer">
+            </div>
+        </form> 
+          </div>
+
+          <div class="container">
+            <div class="successbox">
+                <div class="successbox__support">
+                    
+                    <div class="successbox__header">
+                        <div class="successbox__image--header">
+                            <img src="./Website/img/bx-happy-beaming.svg" alt="image">
+                        </div>
+
+                        <div class="successbox__content--header">
+                            <h4 class="successbox__heading--header">Success<i class='bx bx-x bx-sm successbox__close' id="successbox__close"></i></h4>
+                            <p class="successbox__description--header">Thanks for your review, your feedback has been noted.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="chatbox__button">
+            <button class="chatbox_open_close_button"><img src="./Website/img/messages.svg"></img></button>
+        </div>
+
+        <div class="feedback__button">
+            <button class="feedback_open_close_button"><img src="./Website/img/bx-star.svg" style="width:24px; height:24px;" style="fill: white"></img></button>
+        </div>
+        
+          <script src="Website/js/main.js"></script>
     </body>
 </html>

@@ -91,8 +91,6 @@ class Chatbox{
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
 
-        closeButton.addEventListener('click', () => this.toggleState(chatBox))
-
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
             if (key === "Enter") {
@@ -111,12 +109,6 @@ class Chatbox{
         }
 
         this.counter += 1
-
-        if(this.state) {
-            chatbox.classList.add('chatbox--active')
-        } else{
-            chatbox.classList.remove('chatbox--active')
-        }
     }
 
     onSendButton(chatbox) {
@@ -140,14 +132,23 @@ class Chatbox{
             mode : 'cors',
             headers : {'Content-Type' : 'application/json'},
         })
-        .then(r => r.text())
-        .then(r => {
+        .then(function(response) {
+            if(response.ok) {
+            console.log(response.ok)
+            const r = response.text()
             let msg2 = { name : 'Taj', message : r };
             this.messages.push(msg2);
             this.updateChatText(chatbox)
             textField.value = ''
+            } else {
+            console.log(response.status)
+            let errors_msg = {name : 'Taj', message : 'Due to Google Compute Engine costs, this model is temporarily unavailable. If you would like to <br> test this model, pelase drop me an email at: <br> tajpatel58@gmail.com. Thanks'}
+            this.messages.push(errors_msg)
+            this.updateChatText(chatbox)
+            textField.value = ''
+            }
 
-        }).catch((error) => {
+            }).catch((error) => {
             console.error('Error: ', error);
             let errors_msg = {name : 'Taj', message : 'Due to Google Compute Engine costs, this model is temporarily unavailable. If you would like to <br> test this model, pelase drop me an email at: <br> tajpatel58@gmail.com. Thanks'}
             this.messages.push(errors_msg)
@@ -180,3 +181,144 @@ particlesJS.load('particles-js', './Website/js/particles.json', function() {
 
 const chatbox = new Chatbox();
 chatbox.display();
+
+/*=================================== FEEDBACK FORM JS ================*/
+class FormChatboxInteractables{
+    constructor() {
+        // bool variables:
+        this.chatBoxState = false;
+        this.feedbackSent = false;
+        this.feedbackState = false;
+        this.successBoxState = false;
+
+        // boxes:
+        this.feedbackForm =  document.querySelector('.sign-up__content');
+        this.chatbox = document.querySelector('.chatbox__support');
+        this.successBox = document.querySelector('.successbox__support')
+
+        // close buttons:
+        this.feedbackCloseButton = document.getElementById('feedback__close');
+        this.chatBoxCloseButton = document.querySelector('.chatbox__close');
+        this.successBoxCloseButton = document.querySelector('.successbox__close')
+
+        // open buttons:
+        this.feedbackOpenButton =  document.querySelector('.feedback_open_close_button');
+        this.chatBoxOpenButton = document.querySelector('.chatbox__button'); 
+
+        // buttons:
+        this.submitButton = document.getElementById('sign-up-button');
+        this.messageBox = document.getElementById('message')
+
+    }
+
+    addClickers() {
+        this.chatBoxOpenButton.addEventListener('click', () => this.chatBoxToggleState())
+        this.feedbackOpenButton.addEventListener('click', () => this.feedbackToggleState())
+        this.feedbackCloseButton.addEventListener('click', () => this.feedbackClose())
+        this.chatBoxCloseButton.addEventListener('click', () => this.chatBoxClose())
+        this.messageBox.addEventListener("input", () => this.validateReview())
+        this.submitButton.addEventListener('click', () => this.submitReview())
+        this.successBoxCloseButton.addEventListener('click', () => this.successBoxClose())
+    }
+
+    chatBoxToggleState() {
+        if (this.feedbackSent) {
+            if(!this.chatBoxState && !this.successBoxState) {
+                this.chatbox.classList.add('chatbox--active')
+                this.chatBoxState = true;
+            } else if(this.chatBoxState && !this.successBoxState) {
+                this.chatbox.classList.remove('chatbox--active');
+                this.chatBoxState = false;
+            } else if(!this.chatBoxState && this.successBoxState) {
+                this.chatbox.classList.add('chatbox--active')
+                this.successBox.classList.remove('successbox--active')
+                this.chatBoxState = true;
+                this.successBoxState = false;
+            }
+        } else {
+            if(!this.chatBoxState && !this.feedbackState) {
+                this.chatbox.classList.add('chatbox--active')
+                this.chatBoxState = true;
+            } else if(!this.chatBoxState && this.feedbackState) {
+                this.feedbackForm.classList.remove('form--active')
+                this.chatbox.classList.add('chatbox--active')
+                this.chatBoxState = true;
+                this.feedbackState = false;
+            } else if(this.chatBoxState && !this.feedbackState) {
+                this.chatbox.classList.remove('chatbox--active')
+                this.chatBoxState = false;
+            }
+        }
+    }
+
+    feedbackToggleState() {
+        if (this.feedbackSent) {
+            if(!this.chatBoxState && !this.successBoxState) {
+                this.successBox.classList.add('successbox--active')
+                this.successBoxState= true;
+            } else if(this.chatBoxState && !this.successBoxState) {
+                this.successBox.classList.add('successbox--active')
+                this.chatbox.classList.remove('chatbox--active');
+                this.chatBoxState = false;
+                this.successBoxState = true;
+            } else if(!this.chatBoxState && this.feedbackState) {
+                this.successBox.classList.remove('successbox--active')
+                this.successBoxState = false;
+            }
+        } else  {
+            if(!this.chatBoxState && !this.feedbackState) {
+                this.feedbackForm.classList.add('form--active');
+                this.feedbackState = true;
+            } else if(this.chatBoxState && !this.feedbackState) {
+                this.feedbackForm.classList.add('form--active');
+                this.chatbox.classList.remove('chatbox--active');
+                this.chatBoxState = false;
+                this.feedbackState = true;
+            } else if(!this.chatBoxState && this.feedbackState) {
+                this.feedbackForm.classList.remove('form--active');
+                this.feedbackState = false;
+            }
+        }
+    }
+
+    feedbackClose() {
+        this.feedbackState = false;
+        this.feedbackForm.classList.remove('form--active')
+    }
+
+    chatBoxClose() {
+        this.chatBoxState = false;
+        if (!this.feedbackSent) {
+            this.feedbackState = true;
+            this.chatbox.classList.remove('chatbox--active')
+            this.feedbackForm.classList.add('form--active')
+        } else {
+            this.chatBoxState = false;
+            this.chatbox.classList.remove('chatbox--active')
+        }
+    }
+
+    submitReview() {
+        this.feedbackState = false;
+        this.feedbackSent = true;
+        this.successBoxState = true;
+        this.feedbackForm.classList.remove('form--active')
+        this.successBox.classList.add('successbox--active')
+    }
+
+    successBoxClose() {
+        this.successBox.classList.remove('successbox--active')
+        this.successBoxState = false;
+    }
+
+    validateReview() {
+        if (this.messageBox.value.length == 0) {
+            this.submitButton.disabled = true;
+        } else {
+            this.submitButton.disabled = false; 
+        }
+    }
+}
+
+const interactables = new FormChatboxInteractables();
+interactables.addClickers();
