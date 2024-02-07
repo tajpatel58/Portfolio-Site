@@ -132,14 +132,22 @@ class Chatbox{
             mode : 'cors',
             headers : {'Content-Type' : 'application/json'},
         })
-        .then(r => r.text())
-        .then(r => {
+        .then(function(response) {
+            if(response.ok) {
+            console.log(response.ok)
+            const r = response.text()
             let msg2 = { name : 'Taj', message : r };
             this.messages.push(msg2);
             this.updateChatText(chatbox)
             textField.value = ''
+            } else {
+            let errors_msg = {name : 'Taj', message : 'Due to Google Compute Engine costs, this model is temporarily unavailable. If you would like to <br> test this model, pelase drop me an email at: <br> tajpatel58@gmail.com. Thanks'}
+            this.messages.push(errors_msg)
+            this.updateChatText(chatbox)
+            textField.value = ''
+            }
 
-        }).catch((error) => {
+            }).catch((error) => {
             console.error('Error: ', error);
             let errors_msg = {name : 'Taj', message : 'Due to Google Compute Engine costs, this model is temporarily unavailable. If you would like to <br> test this model, pelase drop me an email at: <br> tajpatel58@gmail.com. Thanks'}
             this.messages.push(errors_msg)
