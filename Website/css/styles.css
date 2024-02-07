@@ -1883,11 +1883,11 @@ body.dark-theme{
   cursor: pointer;
 }
 
-  @media screen and (max-width: 1300px) {
+  /* @media screen and (max-width: 1300px) {
     .chatbox {
       display: none;
     }
     .sign-up__content {
       display: none;
     }
-  }
+  } */
