@@ -141,6 +141,7 @@ class Chatbox{
             this.updateChatText(chatbox)
             textField.value = ''
             } else {
+            console.log(response.status)
             let errors_msg = {name : 'Taj', message : 'Due to Google Compute Engine costs, this model is temporarily unavailable. If you would like to <br> test this model, pelase drop me an email at: <br> tajpatel58@gmail.com. Thanks'}
             this.messages.push(errors_msg)
             this.updateChatText(chatbox)
