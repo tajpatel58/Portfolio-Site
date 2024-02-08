@@ -933,6 +933,7 @@ img{
   cursor: pointer;
   height: 40px; 
   width: 40px;
+  color: var(--first-color-lighten);
 }
 
 .chatbox__button button:hover{
@@ -1765,6 +1766,7 @@ body.dark-theme{
   .feedback__button button:visited {
     padding: 10px;
     background: var(--first-color);
+    color: var(--first-color-lighten);
     border: none;
     outline: none;
     border-top-left-radius: 50px;
@@ -1893,19 +1895,53 @@ body.dark-theme{
       height: 100px;
       
       position:fixed;
-      top:0;
-      bottom: 550px;
+      top: 100px;
+      bottom: 500px;
       left: 0;
       right: 0;
       
       margin: auto;
     }
+
+    .chatbox__support {
+      height: 600px;
+    }
+
+    .chatbox_open_close_button {
+      top: 5px;
+      bottom: 0;
+      right: 50px;
+    }
+
+    .feedback_open_close_button {
+      top: 5px;
+      bottom: 0;
+      right: 0;
+    }
+
+    .feedback__button button,
+    .feedback__button button:focus,
+    .feedback__button button:visited {
+      background: none;
+      border: none;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.0);
+      color: var(--first-color);
+  }
+
+  .chatbox__button button,
+  .chatbox__button button:focus,
+  .chatbox__button button:visited {
+    background: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.0);
+    color: var(--first-color);
+  }
       
     .sign-up__content {
       width: 100px;
+      height: 600px;
       
       position:fixed;
-      top:0;
+      top: 100px;
       bottom: 0px;
       left: 0;
       right: 0;
@@ -1924,4 +1960,4 @@ body.dark-theme{
       
       margin: auto;
     }
-  } */
+  } 
