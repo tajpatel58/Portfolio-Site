@@ -435,6 +435,7 @@ img{
   margin-top: 20px;
   padding: 2em 0;
   list-style-type: none;
+  z-index: -100;
 }
 
 .timeline:before {
@@ -752,6 +753,7 @@ img{
   position: fixed;
   bottom: 100px;
   right: 100px;
+  min-width: 350px;
 }
 
 /* CONTENT IS CLOSE */
@@ -1212,6 +1214,7 @@ body.dark-theme{
   .timeline {
      width: 100%;
     padding: 4em 0 1em 0;
+    z-index: -100;
   }
   
   .timeline li {
@@ -1648,6 +1651,7 @@ body.dark-theme{
     display: none;
     z-index: 123456;
     box-shadow: var(--boxshadow);
+    min-width: 350px;
   }
 
   .feedback__header {
@@ -1883,11 +1887,41 @@ body.dark-theme{
   cursor: pointer;
 }
 
-  /* @media screen and (max-width: 1300px) {
-    .chatbox {
-      display: none;
+  @media screen and (max-width: 1024px) {
+    .chatbox {  
+      width: 100px;
+      height: 100px;
+      
+      position:fixed;
+      top:0;
+      bottom: 550px;
+      left: 0;
+      right: 0;
+      
+      margin: auto;
     }
+      
     .sign-up__content {
-      display: none;
+      width: 100px;
+      
+      position:fixed;
+      top:0;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      
+      margin: auto;
+    }
+
+    .successbox__support {  
+      height: 100px;
+      
+      position:fixed;
+      top:0;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      
+      margin: auto;
     }
   } */
