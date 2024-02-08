@@ -1887,7 +1887,7 @@ body.dark-theme{
   cursor: pointer;
 }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1024px) {
     .chatbox {  
       width: 100px;
       height: 100px;
