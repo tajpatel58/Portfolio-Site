@@ -200,6 +200,7 @@ img{
   color: var(--first-color);
   font-size: 1.3rem;
   cursor: pointer;
+  margin: 5px 0px 0px 0px;
 }
 
 .nav__logo{
@@ -1923,8 +1924,8 @@ body.dark-theme{
 
     .nav__logo {
       position: fixed;
-      top: 15px;
-      right: 95px;
+      top: 13.5px;
+      right: 100px;
 
     }
     .feedback_open_close_button {
@@ -1940,6 +1941,7 @@ body.dark-theme{
       border: none;
       box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.0);
       color: var(--first-color);
+      margin: 1px 0px 0px 0px;
   }
 
   .chatbox__button button,
@@ -1948,6 +1950,7 @@ body.dark-theme{
     background: none;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.0);
     color: var(--first-color);
+    margin: 1px 0px 0px 0px;
   }
       
     .sign-up__content {
