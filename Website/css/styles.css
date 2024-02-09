@@ -264,8 +264,14 @@ img{
 }
 
 .home__social{
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   margin-top: 1.5rem;
+  background-color: var(--background-color);
+
+}
+
+.home__social_2{
+  margin-bottom: 4rem;
   background-color: var(--background-color);
 
 }
@@ -932,8 +938,8 @@ img{
   border-bottom-left-radius: 50px;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  height: 40px; 
-  width: 40px;
+  height: 37px; 
+  width: 38px;
   color: var(--first-color-lighten);
 }
 
@@ -1775,8 +1781,8 @@ body.dark-theme{
     border-bottom-left-radius: 50px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    height: 40px; 
-    width: 40px;
+    height: 37px; 
+    width: 38px;
 }
 
 .feedback__button button:hover{
