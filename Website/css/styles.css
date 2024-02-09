@@ -895,6 +895,7 @@ img{
 
 /* FOOTER */
 .chatbox__footer {
+  min-width: 350px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1905,6 +1906,7 @@ body.dark-theme{
 
     .chatbox__support {
       height: 600px;
+      position: relative;
     }
 
     .chatbox_open_close_button {
@@ -1960,4 +1962,22 @@ body.dark-theme{
       
       margin: auto;
     }
+
+      /* FOOTER */
+  .chatbox__footer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background: var(--primaryGradient);
+    box-shadow: var(--primaryBoxShadow);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .chatbox__messages {
+    margin-bottom: 90px;
+  }
   } 
