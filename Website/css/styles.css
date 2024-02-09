@@ -589,7 +589,7 @@ img{
 }
 
 .desc {
-  margin: 1em 0.75em 0 0;
+  margin: 0em 0em 0em 0em;
   font-size: 0.77777em;
   font-style: italic;
   line-height: 1.5em;
@@ -602,7 +602,7 @@ img{
 }
 
 .direction-r .desc {
-  margin: 1em 0 0 0.75em;
+  margin: 0em 0em 0em 0em;
 }
 
 /* ===== EDUCATION =====*/
@@ -929,7 +929,7 @@ img{
 .chatbox__button button,
 .chatbox__button button:focus,
 .chatbox__button button:visited {
-  padding: 10px;
+  padding: 4px 0px 0px 0px;
   background: var(--first-color);
   border: none;
   outline: none;
@@ -1249,13 +1249,13 @@ body.dark-theme{
   .direction-l .flag:before,
   .direction-r .flag:before {
     position: absolute;
-    top: -30px;
+    top: -15px;
     left: 50%;
     content: ' ';
     display: block;
     width: 12px;
     height: 12px;
-    margin-left: -9px;
+    margin-left: -6px;
     background: var(--first-color-lighten);
     border-radius: 10px;
     border: 4px solid var(--first-color);
@@ -1280,7 +1280,7 @@ body.dark-theme{
   .time-wrapper {
     display: block;
     position: relative;
-    margin: 4px 0 0 0;
+    margin: 15px 0 0 0;
     z-index: 14;
   }
   
@@ -1294,7 +1294,7 @@ body.dark-theme{
   
   .desc {
     position: relative;
-    margin: 1em 0 0 0;
+    margin: 0 0 0 0;
     padding: 2em 2em;
     background: rgb(254, 254, 254);
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
@@ -1307,7 +1307,7 @@ body.dark-theme{
   .direction-l .desc,
   .direction-r .desc {
     position: relative;
-    margin: 1em 1em 0 1em;
+    margin: 0em 1em 0 1em;
     padding: 1em;
     
     z-index: 15;
@@ -1771,7 +1771,7 @@ body.dark-theme{
   .feedback__button button,
   .feedback__button button:focus,
   .feedback__button button:visited {
-    padding: 10px;
+    padding: 3px 5px 0px 8px;
     background: var(--first-color);
     color: var(--first-color-lighten);
     border: none;
