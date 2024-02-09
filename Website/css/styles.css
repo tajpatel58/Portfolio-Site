@@ -1915,10 +1915,16 @@ body.dark-theme{
       right: 50px;
     }
 
+    .nav__logo {
+      position: fixed;
+      top: 15px;
+      right: 100px;
+
+    }
     .feedback_open_close_button {
       top: 5px;
       bottom: 0;
-      right: 0;
+      right: 10px;
     }
 
     .feedback__button button,
@@ -1980,4 +1986,13 @@ body.dark-theme{
   .chatbox__messages {
     margin-bottom: 90px;
   }
+
+  .chatbox__button button:hover{
+    background: none;
   } 
+
+  .feedback__button button:hover{
+    background: none;
+  }
+
+}
