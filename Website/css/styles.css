@@ -1924,7 +1924,7 @@ body.dark-theme{
     .nav__logo {
       position: fixed;
       top: 15px;
-      right: 100px;
+      right: 95px;
 
     }
     .feedback_open_close_button {
@@ -1999,6 +1999,10 @@ body.dark-theme{
 
   .feedback__button button:hover{
     background: none;
+  }
+
+  .home__img{
+    margin-top: 2cm;
   }
 
 }
