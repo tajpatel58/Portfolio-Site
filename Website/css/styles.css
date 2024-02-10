@@ -200,6 +200,7 @@ img{
   color: var(--first-color);
   font-size: 1.3rem;
   cursor: pointer;
+  margin: 5px 0px 0px 0px;
 }
 
 .nav__logo{
@@ -264,8 +265,14 @@ img{
 }
 
 .home__social{
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   margin-top: 1.5rem;
+  background-color: var(--background-color);
+
+}
+
+.home__social_2{
+  margin-bottom: 4rem;
   background-color: var(--background-color);
 
 }
@@ -583,7 +590,7 @@ img{
 }
 
 .desc {
-  margin: 1em 0.75em 0 0;
+  margin: 0em 0em 0em 0em;
   font-size: 0.77777em;
   font-style: italic;
   line-height: 1.5em;
@@ -596,7 +603,7 @@ img{
 }
 
 .direction-r .desc {
-  margin: 1em 0 0 0.75em;
+  margin: 0em 0em 0em 0em;
 }
 
 /* ===== EDUCATION =====*/
@@ -895,6 +902,7 @@ img{
 
 /* FOOTER */
 .chatbox__footer {
+  min-width: 350px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -913,6 +921,7 @@ img{
   padding: 10px 10px;
   border-radius: 30px;
   text-align: left;
+  font-size: 16.1px;
 }
 
 .chatbox__send--footer {
@@ -922,7 +931,7 @@ img{
 .chatbox__button button,
 .chatbox__button button:focus,
 .chatbox__button button:visited {
-  padding: 10px;
+  padding: 4px 0px 0px 0px;
   background: var(--first-color);
   border: none;
   outline: none;
@@ -931,8 +940,9 @@ img{
   border-bottom-left-radius: 50px;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  height: 40px; 
-  width: 40px;
+  height: 37px; 
+  width: 38px;
+  color: var(--first-color-lighten);
 }
 
 .chatbox__button button:hover{
@@ -1241,13 +1251,13 @@ body.dark-theme{
   .direction-l .flag:before,
   .direction-r .flag:before {
     position: absolute;
-    top: -30px;
+    top: -15px;
     left: 50%;
     content: ' ';
     display: block;
     width: 12px;
     height: 12px;
-    margin-left: -9px;
+    margin-left: -6px;
     background: var(--first-color-lighten);
     border-radius: 10px;
     border: 4px solid var(--first-color);
@@ -1272,7 +1282,7 @@ body.dark-theme{
   .time-wrapper {
     display: block;
     position: relative;
-    margin: 4px 0 0 0;
+    margin: 15px 0 0 0;
     z-index: 14;
   }
   
@@ -1286,7 +1296,7 @@ body.dark-theme{
   
   .desc {
     position: relative;
-    margin: 1em 0 0 0;
+    margin: 0 0 0 0;
     padding: 2em 2em;
     background: rgb(254, 254, 254);
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
@@ -1299,7 +1309,7 @@ body.dark-theme{
   .direction-l .desc,
   .direction-r .desc {
     position: relative;
-    margin: 1em 1em 0 1em;
+    margin: 0em 1em 0 1em;
     padding: 1em;
     
     z-index: 15;
@@ -1763,8 +1773,9 @@ body.dark-theme{
   .feedback__button button,
   .feedback__button button:focus,
   .feedback__button button:visited {
-    padding: 10px;
+    padding: 3px 5px 0px 8px;
     background: var(--first-color);
+    color: var(--first-color-lighten);
     border: none;
     outline: none;
     border-top-left-radius: 50px;
@@ -1772,8 +1783,8 @@ body.dark-theme{
     border-bottom-left-radius: 50px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    height: 40px; 
-    width: 40px;
+    height: 37px; 
+    width: 38px;
 }
 
 .feedback__button button:hover{
@@ -1893,19 +1904,62 @@ body.dark-theme{
       height: 100px;
       
       position:fixed;
-      top:0;
-      bottom: 550px;
+      top: 130px;
+      bottom: 500px;
       left: 0;
       right: 0;
       
       margin: auto;
     }
+
+    .chatbox__support {
+      height: 600px;
+      position: relative;
+    }
+
+    .chatbox_open_close_button {
+      top: 5px;
+      bottom: 0;
+      right: 50px;
+    }
+
+    .nav__logo {
+      position: fixed;
+      top: 13.5px;
+      right: 100px;
+
+    }
+    .feedback_open_close_button {
+      top: 5px;
+      bottom: 0;
+      right: 10px;
+    }
+
+    .feedback__button button,
+    .feedback__button button:focus,
+    .feedback__button button:visited {
+      background: none;
+      border: none;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.0);
+      color: var(--first-color);
+      margin: 1px 0px 0px 0px;
+  }
+
+  .chatbox__button button,
+  .chatbox__button button:focus,
+  .chatbox__button button:visited {
+    background: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.0);
+    color: var(--first-color);
+    margin: 1px 0px 0px 0px;
+  }
       
     .sign-up__content {
       width: 100px;
+      height: 600px;
       
       position:fixed;
-      top:0;
+      top: 130px;
       bottom: 0px;
       left: 0;
       right: 0;
@@ -1924,4 +1978,35 @@ body.dark-theme{
       
       margin: auto;
     }
-  } */
+
+      /* FOOTER */
+  .chatbox__footer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background: var(--primaryGradient);
+    box-shadow: var(--primaryBoxShadow);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .chatbox__messages {
+    margin-bottom: 90px;
+  }
+
+  .chatbox__button button:hover{
+    background: none;
+  } 
+
+  .feedback__button button:hover{
+    background: none;
+  }
+
+  .home__img{
+    margin-top: 2cm;
+  }
+
+}
