@@ -941,7 +941,7 @@ img{
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   height: 37px; 
-  width: 38px;
+  width: 140px;
   color: var(--first-color-lighten);
 }
 
@@ -1770,10 +1770,28 @@ body.dark-theme{
     text-align: left;
   }
 
+  .button_text_chatbot {
+    position: fixed;
+    bottom: 36px;
+    right: 80px;
+    font-size: 1.1em;
+    font-weight: var(--font-medium);
+    font-family: var(--body-font);
+  }
+
+  .button_text_feedback {
+    position: fixed;
+    bottom: 87.5px;
+    right: 75px;
+    font-size: 1.3em;
+    font-weight: var(--font-medium);
+    font-family: var(--body-font);
+  }
+
   .feedback__button button,
   .feedback__button button:focus,
   .feedback__button button:visited {
-    padding: 3px 5px 0px 8px;
+    padding: 3px 5px 0px 90px;
     background: var(--first-color);
     color: var(--first-color-lighten);
     border: none;
@@ -1784,8 +1802,20 @@ body.dark-theme{
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     height: 37px; 
-    width: 38px;
+    width: 140px;
 }
+
+.chatbot_img{
+  position: fixed;
+  right: 45px;
+  bottom: 35px;
+}
+
+.feedback_img {
+  position: fixed;
+  right: 45px;
+  bottom: 85px;
+}​
 
 .feedback__button button:hover{
   background-color: var(--first-color-dark);
@@ -1801,13 +1831,14 @@ body.dark-theme{
   position: fixed;
   bottom: 30px;
   right: 30px;
+  font-size: 1em;
 }
 
-  .feedback__close {
-    color: var(--first-color-lighten);
-    float: right;
-    cursor: pointer;
-  }
+.feedback__close {
+  color: var(--first-color-lighten);
+  float: right;
+  cursor: pointer;
+}
 
   /* =======  THANKS/SUCCESS BOX CSS ===== */
 .successbox {
