@@ -1632,8 +1632,8 @@ body.dark-theme{
     min-height: 1000px;
     width: 600px;
     margin-left: auto;
-   margin-right: auto;
-   margin-left: 400px;
+    margin-right: auto;
+    margin-left: 400px;
   }
   
   .sign-up__image, .sign-up__content {
@@ -1691,6 +1691,7 @@ body.dark-theme{
     box-shadow: var(--primaryBoxShadow);
     height: 117px;
   }
+
   .feedback__footer{
   display: flex;
   flex-direction: row;
@@ -1704,10 +1705,12 @@ body.dark-theme{
   width: 350px;
   top: 20;
   }
+
   .sign-up__header {
     margin-bottom: 48px;
     text-align: center;
   }
+
   .sign-up__title {
     font-size: 1rem;
     margin-bottom: 10px;
@@ -1778,7 +1781,6 @@ body.dark-theme{
     transform: translateY(-40px);
     z-index: 123456;
     display: flex;
-
   }
 
   .feedback__button {
@@ -1937,7 +1939,23 @@ body.dark-theme{
     bottom: 500px;
     left: 0;
     right: 0;
-    
+    margin: auto;
+  }
+
+  .form--active {
+    transform: translateY(0px);
+    z-index: 123456;
+    display: flex;
+  }
+
+  .sign-up__content {
+    width: 100px;
+    height: 600px;
+    position:fixed;
+    top: 50px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
     margin: auto;
   }
 
@@ -2026,18 +2044,6 @@ body.dark-theme{
   .feedback__button button:hover{
     background-color: unset;
     }​
-  
-  .sign-up__content {
-    width: 100px;
-    height: 600px;
-    position:fixed;
-    top: 130px;
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    
-    margin: auto;
-  }
 
   .successbox__support {  
     height: 100px;
