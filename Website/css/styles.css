@@ -1379,6 +1379,12 @@ body.dark-theme{
     }
   }
 
+  .feedback__close {
+    color: var(--first-color-lighten);
+    float: right;
+    cursor: pointer;
+  }
+
 /* =======  FEEDBACK FORM CSS ===== */
 
   *, *::before, *::after {
@@ -1830,18 +1836,19 @@ body.dark-theme{
   background-color: var(--first-color-dark);
 }
 
-
 .feedback_svg {
   position: relative;
   right: -25%;
 }​
 
-.feedback__close {
-  position: relative;
-  right: -135%;
+/* HEADER */
+.successbox__header {
+  position: sticky;
+  top: 0;
+  background: orange;
 }
 
-  /* =======  THANKS/SUCCESS BOX CSS ===== */
+
 .successbox {
   position: fixed;
   bottom: 400px;
@@ -1865,14 +1872,6 @@ body.dark-theme{
   z-index: 123456999;
   opacity: 1;
   display: flex;
-}
-
-
-/* HEADER */
-.successbox__header {
-  position: sticky;
-  top: 0;
-  background: orange;
 }
 
 
@@ -1946,6 +1945,16 @@ body.dark-theme{
     transform: translateY(0px);
     z-index: 123456;
     display: flex;
+  }
+
+  .successbox__support {  
+    height: 100px;
+    position:fixed;
+    top:0;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 
   .sign-up__content {
@@ -2052,9 +2061,14 @@ body.dark-theme{
     bottom: 0px;
     left: 0;
     right: 0;
-    
     margin: auto;
   }
+
+  /* .successbox {
+    position: fixed;
+    bottom: 400px;
+    right: 30px;
+  } */
 
       /* FOOTER */
   .chatbox__footer {
