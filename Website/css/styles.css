@@ -159,7 +159,7 @@ img{
   position: fixed;
   top: 0;
   left: -100%;
-  width:20em;
+  width: 18em;
   height: 100vh;
   padding: 3rem;
   display: flex;
@@ -232,6 +232,9 @@ img{
   align-items: center;
   height: max-content;
   text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 .home__img{
