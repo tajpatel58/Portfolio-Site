@@ -1994,7 +1994,7 @@ body.dark-theme{
   .nav__logo {
     position: fixed;
     top: 17px;
-    right: 100px;
+    right: 95px;
 
   }
 
@@ -2015,7 +2015,7 @@ body.dark-theme{
     color: var(--first-color);
     position: fixed;
     top: 15px;
-    right: 60px;
+    right: 55px;
     font-size: 1em;
     z-index: 99999999999999999999999;
   }
@@ -2046,7 +2046,7 @@ body.dark-theme{
     width: 25px;
     position: fixed;
     top: 15px; 
-    right: 30px;
+    right: 25px;
     z-index: 9999999999999999999;
   }
 
