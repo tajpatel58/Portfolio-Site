@@ -594,6 +594,7 @@ img{
 
 .desc {
   margin: 0em 0em 0em 0em;
+  display: block;
   font-size: 0.77777em;
   font-style: italic;
   line-height: 1.5em;
@@ -601,8 +602,7 @@ img{
   background-color: var(--first-color-lighten);
   border-radius: 20px;
   padding: 2em 2em 2em 2em;
-  vertical-align: text-top;
-  border:2px solid var(--first-color);;
+  border:2px solid var(--first-color);
 }
 
 .direction-r .desc {
@@ -2092,4 +2092,42 @@ body.dark-theme{
     margin-top: 2cm;
   }
 
+}
+
+.tech_stack {
+  background: var(--first-color);
+  color: var(--first-color-lighten);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  /* width: 25%;
+  height: 25px; */
+  font-style: normal;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+
+.job_desc{
+  /* width: 25%;
+  height: 25px; */
+  font-style: normal;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-right: 5px;
+  display: block;
+}
+
+.job_title {
+  text-decoration: underline;
+  text-align: center;
 }
