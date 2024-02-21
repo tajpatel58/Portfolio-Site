@@ -2130,4 +2130,6 @@ body.dark-theme{
 .job_title {
   text-decoration: underline;
   text-align: center;
+  font-style: normal;
+  font-size: 1.1em;
 }
