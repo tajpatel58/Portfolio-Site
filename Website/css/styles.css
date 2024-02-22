@@ -235,6 +235,10 @@ img{
   margin: auto;
   width: 50%;
   padding: 10px;
+  height: 100vh;
+  top: 50%;
+  -ms-transform: translateY(20%);
+  transform: translateY(20%);
 }
 
 .home__img{
@@ -245,9 +249,7 @@ img{
   background-color: var(--first-color);
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: var(--mb-2);
-  margin-top: var(--mb-5);
-  margin-top: 3cm;
+  margin-bottom: 0.5cm;
 }
 
 .home__img img{
@@ -265,7 +267,7 @@ img{
 .home__profession{
   font-size: var(--small-font-size);
   color: var(--first-color-dark);
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   background-color: var(--background-color);
   margin-top: 1em;
 }
@@ -2089,10 +2091,6 @@ body.dark-theme{
 
   .chatbox__messages {
     margin-bottom: 90px;
-  }
-
-  .home__img{
-    margin-top: 2cm;
   }
 
 }
