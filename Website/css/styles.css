@@ -1946,6 +1946,21 @@ body.dark-theme{
     margin: auto;
   }
 
+  .home__data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    height: 100vh;
+    top: 50%;
+    -ms-transform: translateY(10%);
+    transform: translateY(10%);
+  }
+
   .form--active {
     transform: translateY(0px);
     z-index: 123456;
