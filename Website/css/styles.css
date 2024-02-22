@@ -1957,8 +1957,8 @@ body.dark-theme{
     padding: 10px;
     height: 100vh;
     top: 50%;
-    -ms-transform: translateY(10%);
-    transform: translateY(10%);
+    -ms-transform: translateY(8%);
+    transform: translateY(8%);
   }
 
   .form--active {
