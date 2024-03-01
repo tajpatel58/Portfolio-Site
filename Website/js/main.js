@@ -304,6 +304,13 @@ class FormChatboxInteractables{
         this.successBoxState = true;
         this.feedbackForm.classList.remove('form--active')
         this.successBox.classList.add('successbox--active')
+        const messageBoxText = this.messageBox.value
+        fetch('http://127.0.0.1:8000/add_review/', {
+            method: 'POST',
+            body : JSON.stringify({review : messageBoxText}),
+            mode : 'cors',
+            headers : {'Content-Type' : 'application/json'}
+        })
     }
 
     successBoxClose() {
